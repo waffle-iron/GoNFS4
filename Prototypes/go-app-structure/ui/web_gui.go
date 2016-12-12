@@ -25,5 +25,6 @@ func StartUIServer() {
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/config", configHandler)
 	fmt.Println("Web GUI server starting on :5555")
-	http.ListenAndServe(":5555", nil)
+	err := http.ListenAndServe(":5555", nil)
+	fmt.Println(err);
 }
