@@ -3,11 +3,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/dotbugfix/GoNFS4/Prototypes/go-app-structure/config"
-	"github.com/dotbugfix/GoNFS4/Prototypes/go-app-structure/ui"
-	"path/filepath"
-	"os"
 	"log"
+	"os"
+	"path/filepath"
+
+	"github.com/dotbugfix/GoNFS4/Prototypes/go-app-structure/config"
+	_ "github.com/dotbugfix/GoNFS4/Prototypes/go-app-structure/ui"
 )
 
 func main() {
@@ -19,5 +20,6 @@ func main() {
 	fmt.Println(dir)
 
 	config.PrintConfig()
-	ui.StartUIServer()
+	config.TestLogging()
+	// ui.StartUIServer()
 }
